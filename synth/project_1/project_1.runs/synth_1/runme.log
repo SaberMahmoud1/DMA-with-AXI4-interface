@@ -1,0 +1,1550 @@
+
+*** Running vivado
+    with args -log top_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_wrapper.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source top_wrapper.tcl -notrace
+Command: synth_design -top top_wrapper -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 160 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 382.605 ; gain = 77.578
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_wrapper' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Wrapper/Wrapper.sv:1]
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_NUM_CHANNELS bound to: 32 - type: integer 
+	Parameter REGFILE_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter REGFILE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter LSB_DUE_OCTET_REF bound to: 2 - type: integer 
+	Parameter C_NUM_CHANNELS bound to: 32 - type: integer 
+	Parameter C_TRANSACTION_SIZE_WIDTH bound to: 32 - type: integer 
+	Parameter C_PRIORITY_WIDTH bound to: 4 - type: integer 
+	Parameter C_FRAME_SIZE bound to: 256 - type: integer 
+	Parameter FIFO_DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'FIFO' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/FIFOs/FIFO.sv:28]
+	Parameter FIFO_WIDTH bound to: 32 - type: integer 
+	Parameter FIFO_DEPTH bound to: 256 - type: integer 
+	Parameter max_fifo_addr bound to: 8 - type: integer 
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/FIFOs/FIFO.sv:80]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/FIFOs/FIFO.sv:81]
+WARNING: [Synth 8-5788] Register mem_reg in module FIFO is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-5788] Register data_out_reg in module FIFO is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/FIFOs/FIFO.sv:58]
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "mem_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'FIFO' (1#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/FIFOs/FIFO.sv:28]
+INFO: [Synth 8-6157] synthesizing module 'register_file' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Register_File/register_file.sv:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 9 - type: integer 
+WARNING: [Synth 8-5788] Register mem_reg in module register_file is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "mem_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'register_file' (2#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Register_File/register_file.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'AXI_slave_controller' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Slave_Controller/AXI_slave_controller.sv:1]
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter REGFILE_ADDRWIDTH bound to: 9 - type: integer 
+	Parameter REGFILE_DATAWIDTH bound to: 32 - type: integer 
+	Parameter LANE_WIDTH bound to: 8 - type: integer 
+	Parameter WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter TRANSACTION_LEN_BITS bound to: 8 - type: integer 
+	Parameter TRANSACTION_SIZE_BITS bound to: 3 - type: integer 
+	Parameter TRANSACTION_BURST_BITS bound to: 2 - type: integer 
+	Parameter TRANSACTION_RESPONSE bound to: 2 - type: integer 
+	Parameter LSB_DUE_OCTET_REF bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'slave_controller_write_fsm' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Slave_Controller/AXI_slave_controller_write_fsm.sv:1]
+	Parameter ADDRESS_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter REGFILE_ADDRWIDTH bound to: 9 - type: integer 
+	Parameter REGFILE_DATAWIDTH bound to: 32 - type: integer 
+	Parameter LANE_WIDTH bound to: 8 - type: integer 
+	Parameter WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter TRANSACTION_LEN_BITS bound to: 8 - type: integer 
+	Parameter TRANSACTION_SIZE_BITS bound to: 3 - type: integer 
+	Parameter TRANSACTION_BURST_BITS bound to: 2 - type: integer 
+	Parameter TRANSACTION_RESPONSE bound to: 2 - type: integer 
+	Parameter LSB_DUE_OCTET_REF bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'address_generator' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Slave_Controller/address_generator.sv:1]
+	Parameter ADDRESS_WIDTH bound to: 32 - type: integer 
+	Parameter TRANSACTION_SIZE_BITS bound to: 3 - type: integer 
+	Parameter TRANSACTION_BURST_BITS bound to: 2 - type: integer 
+	Parameter TRANSACTION_LEN_BITS bound to: 8 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Slave_Controller/address_generator.sv:21]
+INFO: [Synth 8-6155] done synthesizing module 'address_generator' (3#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Slave_Controller/address_generator.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'AlignedWrite' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Slave_Controller/data_generator.sv:1]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Slave_Controller/data_generator.sv:28]
+INFO: [Synth 8-6155] done synthesizing module 'AlignedWrite' (4#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Slave_Controller/data_generator.sv:1]
+WARNING: [Synth 8-5788] Register bufferData_reg in module slave_controller_write_fsm is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'bufferData_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "bufferData_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'slave_controller_write_fsm' (5#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Slave_Controller/AXI_slave_controller_write_fsm.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'slave_controller_read_fsm' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Slave_Controller/AXI_slave_controller_read_fsm.sv:1]
+	Parameter ADDRESS_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter REGFILE_ADDRWIDTH bound to: 9 - type: integer 
+	Parameter REGFILE_DATAWIDTH bound to: 32 - type: integer 
+	Parameter TRANSACTION_LEN_BITS bound to: 8 - type: integer 
+	Parameter TRANSACTION_SIZE_BITS bound to: 3 - type: integer 
+	Parameter TRANSACTION_BURST_BITS bound to: 2 - type: integer 
+	Parameter TRANSACTION_RESPONSE bound to: 2 - type: integer 
+	Parameter LSB_DUE_OCTET_REF bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'slave_controller_read_fsm' (6#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Slave_Controller/AXI_slave_controller_read_fsm.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'AXI_slave_controller' (7#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Slave_Controller/AXI_slave_controller.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'AXI_master_controller' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:52]
+	Parameter C_M_AXI_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_NUM_CHANNELS bound to: 32 - type: integer 
+WARNING: [Synth 8-6104] Input port 'm_axi_bid' has an internal driver [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:221]
+WARNING: [Synth 8-6104] Input port 'm_axi_buser' has an internal driver [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:237]
+WARNING: [Synth 8-6104] Input port 'm_axi_rid' has an internal driver [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:389]
+WARNING: [Synth 8-6104] Input port 'm_axi_ruser' has an internal driver [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:404]
+INFO: [Synth 8-226] default block is never used [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:417]
+WARNING: [Synth 8-87] always_comb on 'm_axi_awvalid_reg' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:260]
+WARNING: [Synth 8-87] always_comb on 'm_axi_awburst_reg' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:261]
+WARNING: [Synth 8-87] always_comb on 'm_axi_awaddr_reg' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:262]
+WARNING: [Synth 8-87] always_comb on 'm_axi_wvalid_reg' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:263]
+WARNING: [Synth 8-87] always_comb on 'm_axi_bready_reg' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:264]
+WARNING: [Synth 8-87] always_comb on 'm_axi_wlast_reg' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:265]
+WARNING: [Synth 8-87] always_comb on 'm_axi_wstrb_reg' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:266]
+WARNING: [Synth 8-87] always_comb on 'write_transaction_completed_reg' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:268]
+WARNING: [Synth 8-87] always_comb on 'w_active_channel_r_reg' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[31]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[30]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[29]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[28]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[27]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[26]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[25]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[24]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[23]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[22]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[21]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[20]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[19]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[18]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[17]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[16]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[15]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[14]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[13]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[12]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[11]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[10]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[9]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[8]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[7]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[6]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[5]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[4]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[3]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[2]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[1]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'fifo_rd_en_reg[0]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:270]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[31]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[30]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[29]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[28]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[27]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[26]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[25]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[24]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[23]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[22]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[21]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[20]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[19]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[18]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[17]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[16]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[15]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[14]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[13]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[12]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[11]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[10]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[9]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[8]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[7]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[6]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[5]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[4]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[3]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[2]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[1]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_beats_r_reg[0]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[31]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[30]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[29]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[28]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[27]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[26]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[25]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[24]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[23]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[22]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[21]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[20]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[19]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[18]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[17]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[16]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[15]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[14]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[13]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[12]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[11]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[10]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[9]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[8]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[7]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[6]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-87] always_comb on 'w_burst_size_r_reg[5]' did not result in combinational logic [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+INFO: [Common 17-14] Message 'Synth 8-87' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'AXI_master_controller' (8#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:52]
+INFO: [Synth 8-6157] synthesizing module 'arbiter' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:73]
+	Parameter C_NUM_CHANNELS bound to: 32 - type: integer 
+	Parameter C_TRANSACTION_SIZE_WIDTH bound to: 32 - type: integer 
+	Parameter C_PRIORITY_WIDTH bound to: 4 - type: integer 
+	Parameter C_FRAME_SIZE bound to: 256 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'calculate_beats_and_bursts' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_calculate_beats_and_bursts.sv:1]
+	Parameter C_NUM_CHANNELS bound to: 32 - type: integer 
+	Parameter C_TRANSACTION_SIZE_WIDTH bound to: 32 - type: integer 
+	Parameter C_PRIORITY_WIDTH bound to: 4 - type: integer 
+	Parameter C_FRAME_SIZE bound to: 256 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'calculate_beats_and_bursts' (9#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_calculate_beats_and_bursts.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'channel_controller' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:20]
+	Parameter C_NUM_CHANNELS bound to: 32 - type: integer 
+	Parameter C_TRANSACTION_SIZE_WIDTH bound to: 32 - type: integer 
+	Parameter C_PRIORITY_WIDTH bound to: 4 - type: integer 
+	Parameter C_FRAME_SIZE bound to: 256 - type: integer 
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:46]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:61]
+INFO: [Synth 8-6155] done synthesizing module 'channel_controller' (10#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/arbiter_channel_controller.sv:20]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[31] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[30] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[29] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[28] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[27] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[26] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[25] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[24] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[23] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[22] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[21] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[20] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[19] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[18] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[17] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[16] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[15] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[14] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[13] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[12] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[11] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[10] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[9] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[8] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[7] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[6] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[5] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[4] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[3] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[2] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[1] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register r_active_channels_reg[0] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:152]
+WARNING: [Synth 8-5788] Register channels_priority_reg[31] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[30] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[29] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[28] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[27] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[26] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[25] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[24] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[23] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[22] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[21] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[20] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[19] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[18] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[17] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[16] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[15] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[14] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[13] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[12] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[11] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[10] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[9] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[8] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[7] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[6] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[5] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[4] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[3] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[2] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[1] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register channels_priority_reg[0] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:153]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[31] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[30] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[29] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[28] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[27] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[26] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[25] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[24] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[23] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[22] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[21] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[20] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[19] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[18] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[17] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[16] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[15] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[14] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[13] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[12] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[11] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[10] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[9] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[8] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[7] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[6] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[5] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[4] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[3] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[2] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[1] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+WARNING: [Synth 8-5788] Register r_ch_transactions_sizes_reg[0] in module arbiter is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:154]
+INFO: [Common 17-14] Message 'Synth 8-5788' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'arbiter' (11#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:73]
+INFO: [Synth 8-6157] synthesizing module 'main_FSM' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/main_FSM.sv:1]
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter REGFILE_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter REGFILE_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'channel_FSM' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/channel_fsm.sv:1]
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter REGFILE_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter REGFILE_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'readChannel_FSM' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/read_channel_fsm.sv:17]
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter REGFILE_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter REGFILE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter MAX_STATE_HOLD bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'priority_encoder' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/priority_encoder.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'priority_encoder' (12#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/priority_encoder.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'counter' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/counter.sv:1]
+	Parameter WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter' (13#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/counter.sv:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/read_channel_fsm.sv:128]
+INFO: [Synth 8-6155] done synthesizing module 'readChannel_FSM' (14#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/read_channel_fsm.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'writeChannel_FSM' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/write_channel_fsm.sv:17]
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter REGFILE_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter REGFILE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter MAX_STATE_HOLD bound to: 2 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/write_channel_fsm.sv:128]
+INFO: [Synth 8-6155] done synthesizing module 'writeChannel_FSM' (15#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/write_channel_fsm.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'channel_FSM' (16#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/channel_fsm.sv:1]
+WARNING: [Synth 8-350] instance 'u_channel_FSM' of module 'channel_FSM' requires 35 connections, but only 33 given [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/main_FSM.sv:95]
+INFO: [Synth 8-6157] synthesizing module 'arbitration_FSM' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/arbitration_FSM.sv:18]
+	Parameter REGFILE_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter REGFILE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter MAX_STATE_HOLD bound to: 2 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/arbitration_FSM.sv:128]
+INFO: [Synth 8-6155] done synthesizing module 'arbitration_FSM' (17#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/arbitration_FSM.sv:18]
+INFO: [Synth 8-6157] synthesizing module 'control_unit_FSM' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/control_unit_FSM.sv:22]
+INFO: [Synth 8-226] default block is never used [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/control_unit_FSM.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'control_unit_FSM' (18#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/control_unit_FSM.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'MUX2to1' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/MUX.sv:1]
+	Parameter DATA_WIDTH bound to: 1'b1 
+INFO: [Synth 8-226] default block is never used [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/MUX.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'MUX2to1' (19#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/MUX.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'MUX2to1__parameterized0' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/MUX.sv:1]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/MUX.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'MUX2to1__parameterized0' (19#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/MUX.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'DMUX1to2' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/DMUX.sv:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DMUX1to2' (20#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/DMUX.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'main_FSM' (21#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Main_FSM/main_FSM.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'top_wrapper' (22#1) [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Wrapper/Wrapper.sv:1]
+WARNING: [Synth 8-3331] design channel_FSM has unconnected port read_resp_error
+WARNING: [Synth 8-3331] design channel_FSM has unconnected port write_resp_error
+WARNING: [Synth 8-3331] design channel_controller has unconnected port transaction_completed
+WARNING: [Synth 8-3331] design AXI_master_controller has unconnected port m_axi_bid[0]
+WARNING: [Synth 8-3331] design AXI_master_controller has unconnected port m_axi_bresp[1]
+WARNING: [Synth 8-3331] design AXI_master_controller has unconnected port m_axi_bresp[0]
+WARNING: [Synth 8-3331] design AXI_master_controller has unconnected port m_axi_buser[0]
+WARNING: [Synth 8-3331] design AXI_master_controller has unconnected port m_axi_rid[0]
+WARNING: [Synth 8-3331] design AXI_master_controller has unconnected port m_axi_rresp[1]
+WARNING: [Synth 8-3331] design AXI_master_controller has unconnected port m_axi_rresp[0]
+WARNING: [Synth 8-3331] design AXI_master_controller has unconnected port m_axi_ruser[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 614.332 ; gain = 309.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 614.332 ; gain = 309.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 614.332 ; gain = 309.305
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'slave_controller_write_fsm'
+INFO: [Synth 8-5544] ROM "awValid_once" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "AXI_awready" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "AXI_awready" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Slave_Controller/AXI_slave_controller_read_fsm.sv:93]
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'slave_controller_read_fsm'
+INFO: [Synth 8-5546] ROM "AXI_arready" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "arValid_once" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'w_cs_reg' in module 'AXI_master_controller'
+INFO: [Synth 8-802] inferred FSM for state register 'r_cs_reg' in module 'AXI_master_controller'
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_rd_en_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fifo_wr_en_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5544] ROM "m_axi_awvalid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "m_axi_awburst" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "m_axi_wstrb" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_ns" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "w_ns" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "m_axi_arvalid" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "m_axi_arburst" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_ns" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_ns" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r_ns" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "beats_of_channels4" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:220]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:217]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:212]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:283]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:279]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/Arbiter/AXI_arbiter.sv:274]
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'readChannel_FSM'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'writeChannel_FSM'
+INFO: [Synth 8-5544] ROM "load_value_enable" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "arbSample" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "CPU_interrupt_end" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'arbitration_FSM'
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/FIFOs/FIFO.sv:62]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             1001 |                             0000
+           WRITE_ADDRESS |                             1010 |                             0001
+WRITE_DATA_AFTER_ADDRESS |                             1000 |                             0010
+         LAST_TRANSFER_A |                             0000 |                             0011
+              WRITE_DATA |                             0010 |                             0100
+  WRITE_DATA_AND_ADDRESS |                             0110 |                             1001
+         LAST_TRANSFER_C |                             1011 |                             1010
+LAST_TRANSFER_B_NO_ADDR_READY |                             0111 |                             0101
+LAST_TRANSFER_B_WITH_ADDR |                             0100 |                             0110
+WRITE_ADDRESS_AFTER_DATA |                             0101 |                             0111
+     BUFFERED_TO_REGFILE |                             0011 |                             1000
+                RESPONSE |                             0001 |                             1011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'slave_controller_write_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               10 |                             0000
+            READ_ADDRESS |                               01 |                             0001
+           READ_RESPONSE |                               11 |                             0010
+           LAST_TRANSFER |                               00 |                             0011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'slave_controller_read_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   RIDLE |                               00 |                               00
+               READ_ADDR |                               01 |                               01
+               READ_DATA |                               10 |                               10
+              READ_DATAA |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_cs_reg' using encoding 'sequential' in module 'AXI_master_controller'
+WARNING: [Synth 8-327] inferring latch for variable 'm_axi_awaddr_reg' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:262]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   WIDLE |                            00001 |                              000
+              WRITE_ADDR |                            00010 |                              001
+              WRITE_DATA |                            00100 |                              010
+             WRITE_DATAA |                            01000 |                              011
+              WWAIT_RESP |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'w_cs_reg' using encoding 'one-hot' in module 'AXI_master_controller'
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[31]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[30]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[29]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[28]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[27]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[26]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[25]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[24]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[23]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[22]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[21]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[20]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[19]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[18]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[17]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[16]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[15]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[14]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[13]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[12]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[11]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[10]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[9]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[8]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[7]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[6]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[5]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[4]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[3]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[2]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[1]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_beats_r_reg[0]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_active_channel_r_reg' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:224]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[31]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[30]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[29]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[28]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[27]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[26]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[25]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[24]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[23]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[22]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[21]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[20]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[19]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[18]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[17]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[16]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[15]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[14]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[13]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[12]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[11]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[10]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[9]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[8]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[7]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[6]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[5]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[4]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[3]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[2]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[1]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'w_burst_size_r_reg[0]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:227]
+WARNING: [Synth 8-327] inferring latch for variable 'm_axi_awburst_reg' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:261]
+WARNING: [Synth 8-327] inferring latch for variable 'm_axi_awvalid_reg' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:260]
+WARNING: [Synth 8-327] inferring latch for variable 'm_axi_wdata_reg' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:313]
+WARNING: [Synth 8-327] inferring latch for variable 'm_axi_wstrb_reg' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:266]
+WARNING: [Synth 8-327] inferring latch for variable 'm_axi_wlast_reg' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:265]
+WARNING: [Synth 8-327] inferring latch for variable 'm_axi_wvalid_reg' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:263]
+WARNING: [Synth 8-327] inferring latch for variable 'm_axi_bready_reg' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:264]
+WARNING: [Synth 8-327] inferring latch for variable 'm_axi_araddr_reg' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:427]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[31]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[30]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[29]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[28]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[27]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[26]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[25]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[24]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[23]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[22]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[21]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[20]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[19]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[18]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[17]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[16]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[15]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[14]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[13]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[12]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[11]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[10]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[9]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[8]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[7]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+WARNING: [Synth 8-327] inferring latch for variable 'r_beats_r_reg[6]' [C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/SystemBlocks/AXI_Master_Controller/AXI_M_C.sv:392]
+INFO: [Common 17-14] Message 'Synth 8-327' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               11 |                               00
+READ_TRANSACTION_DETAILS2 |                               01 |                               01
+        TRANSACTION_DONE |                               10 |                               10
+             REARBITRATE |                               00 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'readChannel_FSM'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               11 |                               00
+WRITE_TRANSACTION_DETAILS2 |                               01 |                               01
+        TRANSACTION_DONE |                               10 |                               10
+             REARBITRATE |                               00 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'writeChannel_FSM'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               01 |                               00
+         ACTIVE_CHANNELS |                               11 |                               01
+         CHANNEL_DETAILS |                               10 |                               10
+       WAIT4_CHANNEL_FSM |                               00 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'arbitration_FSM'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 919.465 ; gain = 614.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------------------------+------------+----------+
+|      |RTL Partition                    |Replication |Instances |
++------+---------------------------------+------------+----------+
+|1     |register_file__GB0               |           1|     32704|
+|2     |register_file__GB1               |           1|     22732|
+|3     |register_file__GB2               |           1|     15969|
+|4     |calculate_beats_and_bursts__GBM0 |           1|     18302|
+|5     |calculate_beats_and_bursts__GBM1 |           1|      5330|
+|6     |calculate_beats_and_bursts__GBM2 |           1|      8048|
+|7     |calculate_beats_and_bursts__GBM3 |           1|     14204|
+|8     |calculate_beats_and_bursts__GBM4 |           1|     13328|
+|9     |calculate_beats_and_bursts__GBM5 |           1|     18431|
+|10    |calculate_beats_and_bursts__GBM6 |           1|     10158|
+|11    |calculate_beats_and_bursts__GBM7 |           1|      3077|
+|12    |arbiter__GC0                     |           1|     18939|
+|13    |FIFO                             |          32|     19332|
+|14    |top_wrapper__GC0                 |           1|     21826|
++------+---------------------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 68    
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 38    
+	   2 Input      8 Bit       Adders := 67    
+	   2 Input      6 Bit       Adders := 66    
+	  32 Input      5 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 8     
+	   2 Input      2 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 8825  
+	                9 Bit    Registers := 38    
+	                8 Bit    Registers := 65    
+	                6 Bit    Registers := 5     
+	                4 Bit    Registers := 33    
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 146   
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 176   
+	   5 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 270   
+	   4 Input      9 Bit        Muxes := 1     
+	   5 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   8 Input      8 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 7     
+	   2 Input      6 Bit        Muxes := 2     
+	  32 Input      5 Bit        Muxes := 2     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 137   
+	   2 Input      4 Bit        Muxes := 104   
+	   6 Input      4 Bit        Muxes := 1     
+	  12 Input      4 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	  39 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 6     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 32    
+	   2 Input      2 Bit        Muxes := 210   
+	   4 Input      2 Bit        Muxes := 22    
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9968  
+	  32 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 144   
+	   5 Input      1 Bit        Muxes := 108   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module register_file 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 515   
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 512   
+Module calculate_beats_and_bursts 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 32    
+	   2 Input      9 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 64    
+	   2 Input      9 Bit        Muxes := 130   
+Module channel_controller__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 32    
++---Muxes : 
+	  32 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 60    
+	  32 Input      1 Bit        Muxes := 2     
+Module channel_controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 32    
++---Muxes : 
+	  32 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 60    
+	  32 Input      1 Bit        Muxes := 2     
+Module arbiter 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 64    
+	                9 Bit    Registers := 2     
+	                6 Bit    Registers := 4     
+	                4 Bit    Registers := 32    
+	                1 Bit    Registers := 70    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 10    
+	   2 Input      9 Bit        Muxes := 6     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 434   
+	   3 Input      1 Bit        Muxes := 2     
+Module FIFO 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 257   
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 261   
+Module address_generator 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   5 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+Module AlignedWrite 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module slave_controller_write_fsm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 10    
+	                9 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 15    
+	   6 Input      4 Bit        Muxes := 1     
+	  12 Input      4 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	  39 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 15    
+Module address_generator__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   5 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+Module slave_controller_read_fsm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 25    
+	   4 Input      4 Bit        Muxes := 6     
+	   2 Input      2 Bit        Muxes := 10    
+	   4 Input      2 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 1     
+Module AXI_master_controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 2     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+	   5 Input     32 Bit        Muxes := 1     
+	   4 Input      9 Bit        Muxes := 1     
+	   5 Input      9 Bit        Muxes := 1     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 9     
+	   5 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 8     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 354   
+	   4 Input      1 Bit        Muxes := 135   
+	   5 Input      1 Bit        Muxes := 108   
+Module priority_encoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 32    
+	   2 Input      4 Bit        Muxes := 16    
+	   2 Input      3 Bit        Muxes := 8     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 35    
+Module counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module readChannel_FSM 
+Detailed RTL Component Info : 
++---Adders : 
+	  32 Input      5 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                9 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 8     
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 26    
+	   4 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 11    
+	   4 Input      1 Bit        Muxes := 3     
+Module priority_encoder__3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 32    
+	   2 Input      4 Bit        Muxes := 16    
+	   2 Input      3 Bit        Muxes := 8     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 35    
+Module counter__12 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module writeChannel_FSM 
+Detailed RTL Component Info : 
++---Adders : 
+	  32 Input      5 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                9 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 8     
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 26    
+	   4 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 11    
+	   4 Input      1 Bit        Muxes := 3     
+Module priority_encoder__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 32    
+	   2 Input      4 Bit        Muxes := 16    
+	   2 Input      3 Bit        Muxes := 8     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 35    
+Module priority_encoder__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 32    
+	   2 Input      4 Bit        Muxes := 16    
+	   2 Input      3 Bit        Muxes := 8     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 35    
+Module counter__10 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module arbitration_FSM 
+Detailed RTL Component Info : 
++---Adders : 
+	  32 Input      5 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      7 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 20    
+	   4 Input      2 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 2     
+Module control_unit_FSM 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module MUX2to1__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module MUX2to1__parameterized0__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+Module DMUX1to2__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module MUX2to1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module MUX2to1__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+Module DMUX1to2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5545] ROM "beats_of_channels4" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design channel_controller has unconnected port current_active_channel[5]
+WARNING: [Synth 8-3331] design channel_controller has unconnected port transaction_completed
+WARNING: [Synth 8-3331] design channel_controller__1 has unconnected port current_active_channel[5]
+WARNING: [Synth 8-3331] design channel_controller__1 has unconnected port transaction_completed
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (w_channel_controller_inst/\first_active_channel_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (w_channel_controller_inst/\next_active_channel_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (r_channel_controller_inst/\first_active_channel_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (r_channel_controller_inst/\next_active_channel_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\w_current_active_channel_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\r_current_active_channel_reg[5] )
+WARNING: [Synth 8-3332] Sequential element (first_active_channel_reg[5]) is unused and will be removed from module channel_controller__1.
+WARNING: [Synth 8-3332] Sequential element (next_active_channel_reg[5]) is unused and will be removed from module channel_controller__1.
+WARNING: [Synth 8-3332] Sequential element (first_active_channel_reg[5]) is unused and will be removed from module channel_controller.
+WARNING: [Synth 8-3332] Sequential element (next_active_channel_reg[5]) is unused and will be removed from module channel_controller.
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5544] ROM "p_2_out0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "u_slave_controller_read_fsm/u_NEXT_ADDR_CALC/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-3331] design channel_FSM has unconnected port read_resp_error
+WARNING: [Synth 8-3331] design channel_FSM has unconnected port write_resp_error
+WARNING: [Synth 8-3331] design AXI_master_controller has unconnected port m_axi_bid[0]
+WARNING: [Synth 8-3331] design AXI_master_controller has unconnected port m_axi_bresp[1]
+WARNING: [Synth 8-3331] design AXI_master_controller has unconnected port m_axi_bresp[0]
+WARNING: [Synth 8-3331] design AXI_master_controller has unconnected port m_axi_buser[0]
+WARNING: [Synth 8-3331] design AXI_master_controller has unconnected port m_axi_rid[0]
+WARNING: [Synth 8-3331] design AXI_master_controller has unconnected port m_axi_rresp[1]
+WARNING: [Synth 8-3331] design AXI_master_controller has unconnected port m_axi_rresp[0]
+WARNING: [Synth 8-3331] design AXI_master_controller has unconnected port m_axi_ruser[0]
+INFO: [Synth 8-3886] merging instance 'u_main_FSM/u_arbitration_FSM/arbChannelTransferSize_reg[30]' (FDCE) to 'u_main_FSM/u_arbitration_FSM/arbChannelTransferSize_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_main_FSM/u_arbitration_FSM/arbChannelTransferSize_reg[31]' (FDCE) to 'u_main_FSM/u_arbitration_FSM/arbChannelPriority_reg[3]'
+INFO: [Synth 8-3886] merging instance 'u_main_FSM/u_arbitration_FSM/arbChannelPriority_reg[3]' (FDCE) to 'u_main_FSM/u_arbitration_FSM/arbCurrentChannelSample_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_main_FSM/\u_arbitration_FSM/arbCurrentChannelSample_reg[5] )
+INFO: [Synth 8-3886] merging instance 'axi_master_controller_inst/m_axi_wstrb_reg[1]' (LD) to 'axi_master_controller_inst/m_axi_wstrb_reg[2]'
+INFO: [Synth 8-3886] merging instance 'axi_master_controller_inst/m_axi_wstrb_reg[2]' (LD) to 'axi_master_controller_inst/m_axi_wstrb_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (axi_master_controller_inst/\m_axi_wstrb_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[31]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[30]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[29]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[28]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[27]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[26]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[25]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[24]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[23]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[22]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[21]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[20]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[19]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[18]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[17]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[16]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[15]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[14]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[13]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[12]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_write_fsm/writeAddress_reg_reg[11]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[31]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[30]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[29]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[28]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[27]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[26]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[25]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[24]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[23]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[22]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[21]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[20]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[19]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[18]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[17]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[16]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[15]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[14]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[13]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[12]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (u_slave_controller_read_fsm/readAddress_reg_reg[11]) is unused and will be removed from module AXI_slave_controller.
+WARNING: [Synth 8-3332] Sequential element (m_axi_wstrb_reg[3]) is unused and will be removed from module AXI_master_controller.
+WARNING: [Synth 8-3332] Sequential element (u_arbitration_FSM/arbCurrentChannelSample_reg[5]) is unused and will be removed from module main_FSM.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:01:09 . Memory (MB): peak = 919.465 ; gain = 614.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------------------------+------------+----------+
+|      |RTL Partition                    |Replication |Instances |
++------+---------------------------------+------------+----------+
+|1     |register_file__GB0               |           1|     32704|
+|2     |register_file__GB1               |           1|     22518|
+|3     |register_file__GB2               |           1|     11018|
+|4     |calculate_beats_and_bursts__GBM0 |           2|     10793|
+|5     |calculate_beats_and_bursts__GBM1 |           2|      3179|
+|6     |calculate_beats_and_bursts__GBM2 |           2|      4803|
+|7     |calculate_beats_and_bursts__GBM3 |           2|     11402|
+|8     |calculate_beats_and_bursts__GBM4 |           2|      8499|
+|9     |calculate_beats_and_bursts__GBM5 |           2|     10947|
+|10    |calculate_beats_and_bursts__GBM6 |           2|      6321|
+|11    |calculate_beats_and_bursts__GBM7 |           2|      2889|
+|12    |arbiter__GC0                     |           1|     14742|
+|13    |FIFO                             |          32|     17568|
+|14    |top_wrapper__GC0                 |           1|     15674|
++------+---------------------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (axi_master_controller_inst/\w_active_channel_r_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (axi_master_controller_inst/\r_active_channel_r_reg[5] )
+WARNING: [Synth 8-3332] Sequential element (w_active_channel_r_reg[5]) is unused and will be removed from module AXI_master_controller.
+WARNING: [Synth 8-3332] Sequential element (r_active_channel_r_reg[5]) is unused and will be removed from module AXI_master_controller.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[0][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[1][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[2][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[3][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[4][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[5][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[6][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[7][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[8][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[9][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[10][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[11][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[12][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[13][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[14][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[15][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[16][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[17][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[18][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[19][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[20][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[21][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[22][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[23][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[24][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[25][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[26][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[27][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[28][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[29][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[30][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\channels_priority_reg[31][3] )
+WARNING: [Synth 8-3332] Sequential element (wr_ack_reg) is unused and will be removed from module FIFO.
+WARNING: [Synth 8-3332] Sequential element (rd_ack_reg) is unused and will be removed from module FIFO.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:01:14 . Memory (MB): peak = 925.445 ; gain = 620.418
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------------------------+------------+----------+
+|      |RTL Partition                    |Replication |Instances |
++------+---------------------------------+------------+----------+
+|1     |register_file__GB0               |           1|      8128|
+|2     |register_file__GB1               |           1|     22518|
+|3     |register_file__GB2               |           1|     11018|
+|4     |calculate_beats_and_bursts__GBM0 |           2|     10793|
+|5     |calculate_beats_and_bursts__GBM1 |           2|      3179|
+|6     |calculate_beats_and_bursts__GBM2 |           2|      4803|
+|7     |calculate_beats_and_bursts__GBM3 |           2|     10519|
+|8     |calculate_beats_and_bursts__GBM4 |           2|      8341|
+|9     |calculate_beats_and_bursts__GBM5 |           2|     10947|
+|10    |calculate_beats_and_bursts__GBM6 |           2|      6294|
+|11    |calculate_beats_and_bursts__GBM7 |           2|      2605|
+|12    |arbiter__GC0                     |           1|     14698|
+|13    |FIFO                             |          32|     17565|
+|14    |top_wrapper__GC0                 |           1|     15597|
++------+---------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:58 ; elapsed = 00:01:25 . Memory (MB): peak = 938.332 ; gain = 633.305
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+------------------------------------+------------+----------+
+|      |RTL Partition                       |Replication |Instances |
++------+------------------------------------+------------+----------+
+|1     |register_file__GB0                  |           1|      3776|
+|2     |register_file__GB1                  |           1|     13646|
+|3     |register_file__GB2                  |           1|     10963|
+|4     |calculate_beats_and_bursts__GBM0    |           2|      6147|
+|5     |calculate_beats_and_bursts__GBM1    |           1|      1805|
+|6     |calculate_beats_and_bursts__GBM2    |           1|      2727|
+|7     |calculate_beats_and_bursts__GBM3    |           2|      5629|
+|8     |calculate_beats_and_bursts__GBM4    |           1|      4728|
+|9     |calculate_beats_and_bursts__GBM5    |           2|      6249|
+|10    |calculate_beats_and_bursts__GBM6    |           1|      3620|
+|11    |calculate_beats_and_bursts__GBM7    |           1|      1363|
+|12    |arbiter__GC0                        |           1|      7494|
+|13    |FIFO                                |          32|     12439|
+|14    |top_wrapper__GC0                    |           1|      9380|
+|15    |calculate_beats_and_bursts__GBM1__1 |           1|      1805|
+|16    |calculate_beats_and_bursts__GBM2__1 |           1|      2727|
+|17    |calculate_beats_and_bursts__GBM4__1 |           1|      4728|
+|18    |calculate_beats_and_bursts__GBM6__1 |           1|      3620|
+|19    |calculate_beats_and_bursts__GBM7__1 |           1|      1363|
++------+------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:59 ; elapsed = 00:02:27 . Memory (MB): peak = 1978.012 ; gain = 1672.984
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:01 ; elapsed = 00:02:30 . Memory (MB): peak = 1978.012 ; gain = 1672.984
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:24 ; elapsed = 00:02:52 . Memory (MB): peak = 1978.012 ; gain = 1672.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:35 ; elapsed = 00:03:05 . Memory (MB): peak = 1978.012 ; gain = 1672.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:41 ; elapsed = 00:03:11 . Memory (MB): peak = 1978.012 ; gain = 1672.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:43 ; elapsed = 00:03:13 . Memory (MB): peak = 1978.012 ; gain = 1672.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+-------+
+|      |Cell   |Count  |
++------+-------+-------+
+|1     |BUFG   |     12|
+|2     |CARRY4 |  12753|
+|3     |LUT1   |    834|
+|4     |LUT2   |  11522|
+|5     |LUT3   |  36274|
+|6     |LUT4   |   3877|
+|7     |LUT5   |   5128|
+|8     |LUT6   |  92358|
+|9     |MUXF7  |  39805|
+|10    |MUXF8  |  19225|
+|11    |FDCE   |   3041|
+|12    |FDPE   |     11|
+|13    |FDRE   | 282080|
+|14    |LD     |   7873|
+|15    |IBUF   |    131|
+|16    |OBUF   |    205|
++------+-------+-------+
+
+Report Instance Areas: 
++------+---------------------------------+---------------------------+-------+
+|      |Instance                         |Module                     |Cells  |
++------+---------------------------------+---------------------------+-------+
+|1     |top                              |                           | 515129|
+|2     |  arbiter_inst                   |arbiter                    |  40123|
+|3     |    r_channel_controller_inst    |channel_controller         |   2473|
+|4     |    w_channel_controller_inst    |channel_controller_34      |   2627|
+|5     |  axi_master_controller_inst     |AXI_master_controller      |  10314|
+|6     |  \genblk1[0].fifo_inst          |FIFO                       |  12590|
+|7     |  \genblk1[10].fifo_inst         |FIFO_0                     |  12536|
+|8     |  \genblk1[11].fifo_inst         |FIFO_1                     |  12536|
+|9     |  \genblk1[12].fifo_inst         |FIFO_2                     |  12535|
+|10    |  \genblk1[13].fifo_inst         |FIFO_3                     |  12536|
+|11    |  \genblk1[14].fifo_inst         |FIFO_4                     |  12536|
+|12    |  \genblk1[15].fifo_inst         |FIFO_5                     |  12536|
+|13    |  \genblk1[16].fifo_inst         |FIFO_6                     |  12535|
+|14    |  \genblk1[17].fifo_inst         |FIFO_7                     |  12540|
+|15    |  \genblk1[18].fifo_inst         |FIFO_8                     |  12536|
+|16    |  \genblk1[19].fifo_inst         |FIFO_9                     |  12536|
+|17    |  \genblk1[1].fifo_inst          |FIFO_10                    |  12590|
+|18    |  \genblk1[20].fifo_inst         |FIFO_11                    |  12535|
+|19    |  \genblk1[21].fifo_inst         |FIFO_12                    |  12536|
+|20    |  \genblk1[22].fifo_inst         |FIFO_13                    |  12536|
+|21    |  \genblk1[23].fifo_inst         |FIFO_14                    |  12536|
+|22    |  \genblk1[24].fifo_inst         |FIFO_15                    |  12535|
+|23    |  \genblk1[25].fifo_inst         |FIFO_16                    |  12536|
+|24    |  \genblk1[26].fifo_inst         |FIFO_17                    |  12536|
+|25    |  \genblk1[27].fifo_inst         |FIFO_18                    |  12536|
+|26    |  \genblk1[28].fifo_inst         |FIFO_19                    |  12535|
+|27    |  \genblk1[29].fifo_inst         |FIFO_20                    |  12538|
+|28    |  \genblk1[2].fifo_inst          |FIFO_21                    |  12590|
+|29    |  \genblk1[30].fifo_inst         |FIFO_22                    |  12538|
+|30    |  \genblk1[31].fifo_inst         |FIFO_23                    |  12538|
+|31    |  \genblk1[3].fifo_inst          |FIFO_24                    |  12558|
+|32    |  \genblk1[4].fifo_inst          |FIFO_25                    |  12538|
+|33    |  \genblk1[5].fifo_inst          |FIFO_26                    |  12537|
+|34    |  \genblk1[6].fifo_inst          |FIFO_27                    |  12538|
+|35    |  \genblk1[7].fifo_inst          |FIFO_28                    |  12534|
+|36    |  \genblk1[8].fifo_inst          |FIFO_29                    |  12537|
+|37    |  \genblk1[9].fifo_inst          |FIFO_30                    |  12538|
+|38    |  u_AXI_slave_controller         |AXI_slave_controller       |   1715|
+|39    |    u_slave_controller_read_fsm  |slave_controller_read_fsm  |    203|
+|40    |      u_NEXT_ADDR_CALC           |address_generator_33       |     23|
+|41    |    u_slave_controller_write_fsm |slave_controller_write_fsm |   1512|
+|42    |      u_AlignedWrite             |AlignedWrite               |    353|
+|43    |      u_NEXT_ADDR_CALC           |address_generator          |     23|
+|44    |  u_main_FSM                     |main_FSM                   |   1496|
+|45    |    u_arbitration_FSM            |arbitration_FSM            |    654|
+|46    |      u_stateCounter             |counter_32                 |    117|
+|47    |    u_channel_FSM                |channel_FSM                |    726|
+|48    |      u_readChannel_FSM          |readChannel_FSM            |    369|
+|49    |        u_stateCounter           |counter_31                 |    147|
+|50    |      u_writeChannel_FSM         |writeChannel_FSM           |    357|
+|51    |        u_stateCounter           |counter                    |    136|
+|52    |    u_control_unit_FSM           |control_unit_FSM           |    116|
+|53    |  u_register_file                |register_file              |  27890|
++------+---------------------------------+---------------------------+-------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:43 ; elapsed = 00:03:13 . Memory (MB): peak = 1978.012 ; gain = 1672.984
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1185 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:43 ; elapsed = 00:03:13 . Memory (MB): peak = 1978.012 ; gain = 1672.984
+Synthesis Optimization Complete : Time (s): cpu = 00:02:43 ; elapsed = 00:03:13 . Memory (MB): peak = 1978.012 ; gain = 1672.984
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 79787 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 34 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 7873 instances were transformed.
+  LD => LDCE: 7839 instances
+  LD => LDCE (inverted pins: G): 34 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+262 Infos, 449 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:04:17 ; elapsed = 00:04:51 . Memory (MB): peak = 2043.473 ; gain = 1800.000
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/saber/Desktop/SI vision/project/DMA/System_2/System_2/synth/project_1/project_1.runs/synth_1/top_wrapper.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:01:03 ; elapsed = 00:00:59 . Memory (MB): peak = 2043.473 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file top_wrapper_utilization_synth.rpt -pb top_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2043.473 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 17 22:56:15 2024...
